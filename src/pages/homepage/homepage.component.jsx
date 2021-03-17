@@ -1,6 +1,6 @@
-import React from 'react'
+import React,{Component} from 'react'
 import "./homepage.styles.scss"
-export const HomePage= ()=>{
+export const HomePage= () => {
     return (
         <div className="homepage">
             <div className="content">
@@ -39,5 +39,5 @@ export const HomePage= ()=>{
             </div>
         </div>
     )
-}
-
+ 
+    }
