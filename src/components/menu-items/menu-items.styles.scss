@@ -7,6 +7,9 @@
     justify-content: center;
     border: 1px solid black;
     margin: 0 7.5px 15px;
+    // currently is flowing out of its div 
+    overflow: hidden;
+    // this is to hide the overflow of the image on the hover 
     &:hover {
       cursor: pointer;
     
