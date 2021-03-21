@@ -1,7 +1,8 @@
- import React from "react"
- import "./menu-items.styles.scss"
+import React from "react"
+import "./menu-items.styles.scss"
+import {withRouter} from "react-router-dom"
 
-export const MenuItems=({title , imageUrl, size})=>{ 
+const MenuItems=({title , imageUrl, size})=>{ 
      return (
     <div className={`${size} menu-items`}>
     <div 
@@ -18,3 +19,6 @@ export const MenuItems=({title , imageUrl, size})=>{
          
      )
  }
+ // by wrapping this component with history we get access to the 
+ // history prop here 
+ export default withRouter(MenuItems)
