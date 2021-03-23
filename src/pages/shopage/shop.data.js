@@ -246,4 +246,3 @@ const ShopData=[
     }
   ]
   export default ShopData; 
-  
