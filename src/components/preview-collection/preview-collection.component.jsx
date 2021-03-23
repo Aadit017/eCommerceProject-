@@ -7,7 +7,13 @@ const Preview =({title,items})=>{
         <h1>{title.toUpperCase()}</h1>
         <div className="preview">
             {
-                items.map((item)=>(
+                // without the filter option we get basically all the items in the json data list 
+                // we only require 4 items on the preview component 
+                // for that we would use the filter method 
+                items
+                .filter((item,idx) => idx < 4)
+                // not recommended as this filter method might prove to be slow on weaker devices 
+                .map((item)=>(
                     <div key={item.id} >
                         {item.name}
                     </div>
