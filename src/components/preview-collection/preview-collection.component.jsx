@@ -16,5 +16,6 @@ const Preview =({title,items})=>{
         </div>
     </div>
     )
+    //  checking sth 
 }
 export default Preview;
