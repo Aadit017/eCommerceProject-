@@ -1,9 +1,9 @@
 import React from "react"
 import "./preview-collection.styles.scss"
-
+import CollectionItem from "../collection-item/collection-item.component"
 const Preview =({title,items})=>{
     return (
-    <div className="collection=preview">
+    <div className="collection-preview">
         <h1>{title.toUpperCase()}</h1>
         <div className="preview">
             {
@@ -13,10 +13,10 @@ const Preview =({title,items})=>{
                 items
                 .filter((item,idx) => idx < 4)
                 // not recommended as this filter method might prove to be slow on weaker devices 
-                .map((item)=>(
-                    <div key={item.id} >
-                        {item.name}
-                    </div>
+                .map(({id, ...otherItemProps})=>(
+                    <CollectionItem key={id}
+                        {...otherItemProps}
+                    />                    
                 ))
             }
         </div>
