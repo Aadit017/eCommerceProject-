@@ -4,7 +4,7 @@ import "./form-input.style.scss"
 const FormInput =()=>{
     return (
         <div>
-            
+                
         </div>
     )
 }

@@ -10,7 +10,8 @@ class SignIn extends Component{
     }
     handleSubmit=event=>{
         event.preventDefault();
-        this.setState({email:' ',password:' '})
+        // after submitting we are setting the email and the password back as empty fiedls 
+        this.setState({email:'',password:''})
     }
     handleChangeEmail=event=>{
         const {value, name}=event.target;
@@ -21,6 +22,7 @@ class SignIn extends Component{
         this.setState({[name]:value})
     
     }
+    
 //! in the code below the [] on name is very important 
 render(){
     return(
