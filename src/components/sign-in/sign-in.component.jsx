@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-
+import FormInput from "../form-input/form-input.component"
 class SignIn extends Component{ 
     constructor(props){
         super(props);
@@ -22,20 +22,21 @@ class SignIn extends Component{
         this.setState({[name]:value})
     
     }
-    
-//! in the code below the [] on name is very important 
+    //! after v1 commit of this file , the handle change was modified in a way to 
+    //! reduce the number of codes 
+//? in the code below the [] on name is very important 
 render(){
     return(
         <div className="sign-in" >
             <h2>I already have an account </h2>
             <span> sign in with your email and password</span>
         <form onSubmit={this.handleSubmit}>
-            <input type="email" name="email" value={this.state.email} placeholder="enter your email" required 
-                                onChange={this.handleChangeEmail}
+            <FormInput type="email" name="email" value={this.state.email} placeholder="enter your email" required 
+                                handleChange={this.handleChangeEmail}
             />
             <label>Email</label>
-            <input type="password" name="password" value={this.state.password} placeholder="enter your password" required 
-                onChange={this.handleChangePassword}    
+            <FormInput type="password" name="password" value={this.state.password} placeholder="enter your password" required 
+                handleChange={this.handleChangePassword}    
             />
             <label>Password</label>
             <input type="submit" value="Submit-form" />
