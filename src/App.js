@@ -1,4 +1,4 @@
-import React ,{ useState, useEffect, Component } from 'react';
+import React ,{ Component } from 'react';
 import {HomePage} from "./pages/homepage/homepage.component"
 import {Route} from "react-router-dom"
 import './App.css';
@@ -11,22 +11,22 @@ class App extends Component{
   constructor(){
     super();
     this.state={
-      currentUser:null
+      currentUser:null // null -> false 
     }
   }
-  
-  // componentDidMount(){
-  //   auth.onAuthStateChanged(user=>{
-  //     this.setState({currentUser:user})
-  //     console.log(user.displayName)
-  //   })
-  // }
+  unsubscribeFromAuth=null;
+  componentDidMount(){
+    this.unsubscribeFromAuth=auth.onAuthStateChanged(user=>{
+      this.setState({currentUser:user})
+      console.log(user.displayName)
+    })
+  }
   
   render(){
     return (
       <div className="App">
-      <Header />
-      <Route exact path="/" component={HomePage} />             
+      <Header currentUser={this.state.currentUser} />
+      <Route exact path="/" component={HomePage} />
       <Route exact path="/shop" component={Shop} />
       <Route exact path="/signin" component={SignInAndSignUp} />
       </div>
