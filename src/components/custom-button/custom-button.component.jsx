@@ -7,5 +7,4 @@ function CustomButton({children , ...otherProps}) {
         </div>
     )
 }
-
 export default CustomButton;

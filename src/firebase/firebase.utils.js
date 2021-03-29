@@ -19,6 +19,6 @@ const provider= new firebase.auth.GoogleAuthProvider();
 // then we are selecting what the prompt should be 
 provider.setCustomParameters({prompt:'select_account'})
 // then we are exporting 'signInWithGoogle' which will be used ahead in our project to execute the authentication 
-export const signInWithGoogle=auth.signInWithPopup(provider)
+export const signInWithGoogle=()=>auth.signInWithPopup(provider)
 
 export default firebase;
