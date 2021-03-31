@@ -39,6 +39,7 @@ render(){
             <FormInput type="password" name="password" value={this.state.password} placeholder="........" required 
                 handleChange={this.handleChangePassword} label="Password"
             />
+            
 <CustomButton type="submit">Sign in</CustomButton>
 <CustomButton type="button" onClick={signInWithGoogle}>
 Sign-In With Google
