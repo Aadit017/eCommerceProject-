@@ -8,7 +8,6 @@ const userReducer =(state=INTIAL_STATE, action ) =>{
                 ...state, 
                 currentUser:action.payload 
             }
-
         default:
             return state // intial state 
     }
