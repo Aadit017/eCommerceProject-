@@ -10,42 +10,44 @@ class SignIn extends Component{
             password: '' 
         }
     }
-    handleSubmit=event=>{
-        event.preventDefault();
-        // after submitting we are setting the email and the password back as empty fiedls 
-        this.setState({email:'',password:''})
-    }
-    handleChangeEmail=event=>{
-        const {value, name}=event.target;
-        this.setState({[name]:value})
-    }
-    handleChangePassword=event=>{
-        const {value,name} =event.target ;
-        this.setState({[name]:value})
+//     handleSubmit=event=>{
+//         event.preventDefault();
+//         // after submitting we are setting the email and the password back as empty fiedls 
+//         this.setState({email:'',password:''})
+//     }
+//     handleChangeEmail=event=>{
+//         const {value, name}=event.target;
+//         this.setState({[name]:value})
+//     }
+//     handleChangePassword=event=>{
+//         const {value,name} =event.target ;
+//         this.setState({[name]:value})
     
-    }
-    //! after v1 commit of this file , the handle change was modified in a way to 
-    //! reduce the number of codes 
-//? in the code below the [] on name is very important 
+//     }
+//     //! after v1 commit of this file , the handle change was modified in a way to 
+//     //! reduce the number of codes 
+// //? in the code below the [] on name is very important 
 render(){
     return(
-        <div className="sign-in" >
-            <h2>I already have an account </h2>
-            <span> sign in with your email and password</span>
-        <form onSubmit={this.handleSubmit}>
-            <FormInput type="email" name="email" value={this.state.email} placeholder="abc@xyz.com" required 
-                                handleChange={this.handleChangeEmail} label="Email"
-            />
-            <FormInput type="password" name="password" value={this.state.password} placeholder="........" required 
-                handleChange={this.handleChangePassword} label="Password"
-            />
+//         <div className="sign-in" >
+//             <h2>I already have an account </h2>
+//             <span> sign in with your email and password</span>
+//         <form onSubmit={this.handleSubmit}>
+//             <FormInput type="email" name="email" value={this.state.email} placeholder="abc@xyz.com" required 
+//                                 handleChange={this.handleChangeEmail} label="Email"
+//             />
+//             <FormInput type="password" name="password" value={this.state.password} placeholder="........" required 
+//                 handleChange={this.handleChangePassword} label="Password"
+//             />
             
-<CustomButton type="submit">Sign in</CustomButton>
-<CustomButton type="button" onClick={signInWithGoogle}>
-Sign-In With Google
-</CustomButton>
-        </form>
-        </div>
+// <CustomButton type="submit">Sign in</CustomButton>
+// <CustomButton type="button" onClick={signInWithGoogle}>
+// Sign-In With Google
+// </CustomButton>
+//         </form>
+//         </div>
+    <pre> This page is currently under dev , sorry for the trouble </pre>
+
     )
 }
 }

@@ -17,10 +17,12 @@ class App extends Component{
   componentDidMount(){
     this.unsubscribeFromAuth=auth.onAuthStateChanged(async user=>{
       createUserProfileDocument(user)
+      console.log(this.state.currentUser)
     })
   }
  render(){ 
-    return (
+  console.log(this.state.currentUser)
+  return (
       <div className="App">
       <Header currentUser={this.state.currentUser} />
       <Route exact path="/" component={HomePage} />

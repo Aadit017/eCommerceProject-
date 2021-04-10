@@ -3,8 +3,13 @@ import "./header.style.scss"
 import { Link } from "react-router-dom"
 import { ReactComponent as Logo } from "../../assets/crown.svg"
 import {auth} from "../../firebase/firebase.utils"
+import { connect } from "react-redux"
+
+
+
 //  something important to note that this is the correct syntax of importing a svg file in react 
-// because the crown svg is not a jsx file 
+// because the crown svg is not a jsx file import { connect } from 're';
+
 const Header =({currentUser})=>{ 
     return(
         <div className="header">
@@ -23,4 +28,7 @@ const Header =({currentUser})=>{
         </div>
     )
 }
-export default Header;
+const mapStateToProps= state =>({
+    currentUser:state.user.currentUser
+})
+export default connect(mapStateToProps)(Header);

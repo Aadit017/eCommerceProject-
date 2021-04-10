@@ -1,5 +1,6 @@
+//! this file is like the index.js file 
 import { applyMiddleware, createStore } from "redux";
-import { logger } from "workbox-core/_private";
+import {logger} from 'redux-logger'
 import rootReducer from "./root-reducer";
 const middlewares=[
     logger
@@ -10,6 +11,3 @@ const store = createStore(rootReducer,applyMiddleware(
 
 
 export default store 
-
-
-

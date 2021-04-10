@@ -1,3 +1,4 @@
+// ! this file is the action file
 const INTIAL_STATE ={ 
     currentUser:null // null -> false 
 }
